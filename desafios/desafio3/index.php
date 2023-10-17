@@ -15,7 +15,7 @@
   <section>
     <form action="converte.php" method="get">
       <label for="number">Quantos R$(reais) você tem?</label>
-      <input type="number" name="number" id="number">
+      <input type="number" name="number" id="number" step="0.01">
       <input type="submit" value="Converter">
     </form>
   </section>
