@@ -14,7 +14,7 @@
     <h1>Verificando processamento</h1>
     <p>
         <?php
-          $number = $_REQUEST["number"] ?? 1;
+          $number = (int) $_REQUEST["number"] ?? 1;
           echo "O Numero escolhido foi " .  "<strong>$number</strong>" . "<br>";
           echo "O seu antecessor é " . $number - 1 . "<br>";
           echo "O seu sucessor é " . $number + 1;

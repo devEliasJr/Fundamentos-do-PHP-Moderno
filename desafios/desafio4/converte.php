@@ -22,9 +22,10 @@
           $dados = json_decode(file_get_contents($url), true);
           
           $cotacaoDolar = $dados["value"][0]["cotacaoCompra"];
-          
-          $number = $_REQUEST["number"] ?? 0;
 
+          $number_noformt = (int) $_REQUEST["number"];
+          $number = $number_noformt !== 0 ? $number_noformt : 1;
+          
           $convertido = $number / $cotacaoDolar;
 
           // Formatação de moedas com internacionalização

@@ -10,7 +10,7 @@
     <main>
       <h1>Analisador de Numero Real</h1>
       <?php 
-        $num = $_REQUEST["n"] ?? 0;
+        $num = (int) $_REQUEST["n"] ?? 1;
 
 
         echo "<p>Analisando o número <strong>". number_format($num, 3, ",", "." ) ."</strong> informado pelo usuario</p>" . "<br>";
